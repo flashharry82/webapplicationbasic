@@ -10,12 +10,13 @@ namespace WebApplicationBasic.Controllers
     {
         public IActionResult Index()
         {
+            ViewData["Message"] = "Hello";
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult About(int id)
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = $"Your application description page. ID={id}";
 
             return View();
         }
